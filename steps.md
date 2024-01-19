@@ -1,8 +1,8 @@
 # Phases of RAG
 
-Scenario: Print help for CLI
-Scenario: Run CLI generate with path to PDF as args.  Result: stats displayed
-Scenario: Run CLI query with path to PDF and openai key as args.  Repl loop requesting input and printing result
+1. Scenario: Print help for CLI
+2. Scenario: Run CLI generate with path to PDF as args.  Result: stats displayed
+3. Scenario: Run CLI query with path to PDF and openai key as args.  Repl loop requesting input and printing result
 
 ## Generate
 - Parse CLI args to get path to PDF
