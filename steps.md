@@ -4,19 +4,28 @@
 2. Scenario: Run CLI generate with path to PDF as args.  Result: stats displayed
 3. Scenario: Run CLI query with path to PDF and openai key as args.  Repl loop requesting input and printing result
 
-## Generate
+files:
+- vectordb
+- generate
+- chat
+
+## Generate DB
 - Parse CLI args to get path to PDF
-- Parse PDF
-- Chunk parsed text
-- Convert chunks to tokens
-- Generate embedding vector (tiktoken)
-- Store chunks and embedding vectors in memory
+- Parse PDF: is there a lib?
+- Chunk parsed text: langchain (library) has a chunker for PDF, may have a reader
+- Convert chunks to tokens: (open AI) (tiktoken)
+- Generate embedding vector: call model (open AI) 
+- Store chunks and embedding vectors in memory: (write this)
+- Sort vectors by ID for efficient lookup
 - Persist in memory representation to file
 - Exit printing stats
 
-## Query
+## Query / chat
 - parse arguments to extract file path to load and openAI key
 - Load file and deserialize to in-memory representation
+- repl loop
+- handle previous context
+- check token limits
 - convert query text to chunks
 - convert chunks to tokens
 - generate embedding vector from tokens (tiktoken)
