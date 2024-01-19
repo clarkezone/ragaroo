@@ -1,0 +1,15 @@
+# python3 -m pip install requests
+
+fn main() raises:
+	print("Hello Jeff 🔥")
+
+	# Let's make a http request
+	
+	# to microsoft.com
+	from python import Python
+	let req = Python.import_module("requests")
+	let r = req.get("https://microsoft.com")
+	print(r.status_code)
+	print(r.text)
+
+
