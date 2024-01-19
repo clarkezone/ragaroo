@@ -1,8 +1,11 @@
 # Phases of RAG
 
-Scenario: Run CLI generate against a document
+Scenario: Print help for CLI
+Scenario: Run CLI generate with path to PDF as args.  Result: stats displayed
+Scenario: Run CLI query with path to PDF and openai key as args.  Repl loop requesting input and printing result
 
 ## Generate
+- Parse CLI args to get path to PDF
 - Parse PDF
 - Chunk parsed text
 - Convert chunks to tokens
@@ -12,6 +15,7 @@ Scenario: Run CLI generate against a document
 - Exit printing stats
 
 ## Query
+- parse arguments to extract file path to load and openAI key
 - Load file and deserialize to in-memory representation
 - convert query text to chunks
 - convert chunks to tokens
